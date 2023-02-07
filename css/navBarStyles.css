@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+.navBar, .logo_NombreApp, .button_logOut, .button_explorarTabla, .button_nuevaTabla, .contenedor_botonesImportantes {
+    display: flex;
+}
+
+.navBar {
+    background-color:  rgba(0, 0, 0, 0.113);
+    margin: 0;
+    width: 90px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.contenedor_botonesImportantes {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo_NombreApp, .button_logOut, .button_nuevaTabla, .button_explorarTabla {
+    background-color:  rgba(0, 0, 0, 0.416);
+    border-radius: 8px;
+    height: 60px;
+    width: 60px;
+    align-items:center;
+}
+
+.logo_NombreApp {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    margin: 0;
+    border: solid rgba(255, 255, 255, 0.398) 1px;
+}
+
+.button_logOut, .button_nuevaTabla, .button_explorarTabla {
+    border: none;
+    justify-content: center;
+}
+
+.button_logOut:hover, .button_nuevaTabla:hover, .button_explorarTabla:hover  {
+    background-color:  rgba(255, 255, 255, 0.29);
+    color: rgb(40, 39, 39);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.image_logOut, .image_explorarTabla {
+    height: 30px;
+    width: 30px;
+    filter:  invert(0.8);
+}
+
+.image_nuevaTabla {
+    height: 40px;
+    width: 40px;
+    filter:  invert(0.8);
+}
