@@ -3,19 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navBarStyles.css">
     <link rel="stylesheet" href="/css/explorarStyles.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Teburu Portal</title>
 </head>
 <body>
+    <nav class="navBar">
+        <div class="contenedor_botonesImportantes">
+            <h2 class="logo_NombreApp">Teburu Portal</h2>
+            <a href="nuevaTabla.html"  class="button_nuevaTabla">
+                <img class="image_nuevaTabla" src="/image/spreadsheet.png" alt="logo logOut">
+            </a>
+            <a href="explorar.html"  class="button_explorarTabla">
+                <img class="image_explorarTabla" src="/image/table-grid.png" alt="logo logOut">
+            </a>    
+        </div>
+        <a href="index.html" class="button_logOut">
+            <img class="image_logOut" src="/image/logout.png" alt="logo logOut">
+        </a>
+    </nav>
     <div class="contenedor_Areas">
-        <h2>ÁREAS</h2>
+        <h2 class="subtitulos_explorar">ÁREAS</h2>
+        <div class="contenedor_Total">
+            <div class="contenedor_Area">
+                <p>nombre_Area1</p>
+            </div>
+            <div class="contenedor_Area">
+                <p>nombre_Area2</p>
+            </div>
+            <div class="contenedor_Area">
+                <p>nombre_Area3</p>
+            </div>
+        </div>
     </div>
     <div class="contenedor_Proyectos">
-        <h2>PROYECTOS</h2>
+        <img class="icon_cerrar" src="/image/cerrar.png" alt="">
+        <h2 class="subtitulos_explorar">NOMBRE_AREA1 - PROYECTOS</h2>
+        <div class="contenedor_Total">
+            <div class="contenedor_Proyecto">
+                <p>nombre_Proyecto1</p>
+            </div>
+            <div class="contenedor_Proyecto">
+                <p>nombre_Proyecto2</p>
+            </div>
+            <div class="contenedor_Proyecto">
+                <p>nombre_Proyecto3</p>
+            </div>
+        </div>
     </div>
     <div class="contenedor_Tablas">
-        <h2>TABLAS</h2>
+        <img class="icon_cerrar" src="/image/cerrar.png" alt="">
+        <h2 class="subtitulos_explorar">NOMBRE_AREA1 - NOMBRE_PROYECTO1 - TABLAS</h2>
+        <div class="contenedor_TotalTablas">
+            <div class="contenedor_Tabla">
+                <p class="nombre_Tabla">nombre_Proyecto1</p>
+                <div class="contenedor_botones">
+                    <button class="button_tabla">Mostrar Tabla</button>
+                    <label class="input_labelTabla">Selecionar Archivo
+                        <input class="input_fileTabla" type="file">    
+                    </label>
+                </div>
+            </div>
+            <div class="contenedor_Tabla">
+                <p class="nombre_Tabla">nombre_Proyecto2</p>
+                <div class="contenedor_botones">
+                    <button class="button_tabla">Mostrar Tabla</button>
+                    <label class="input_labelTabla">Selecionar Archivo
+                        <input class="input_fileTabla" type="file">    
+                    </label>
+                </div>
+            </div>
+            <div class="contenedor_Tabla">
+                <p class="nombre_Tabla">nombre_Proyecto3</p>
+                <div class="contenedor_botones">
+                    <button class="button_tabla">Mostrar Tabla</button>
+                    <label class="input_labelTabla">Selecionar Archivo
+                        <input class="input_fileTabla" type="file">    
+                    </label>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
