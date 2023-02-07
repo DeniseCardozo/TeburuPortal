@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/navBarStyles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/nuevaTablaStyles.css">
+    <title>Teburu Portal</title>
+</head>
+<body>
+    <nav class="navBar">
+        <div class="contenedor_botonesImportantes">
+            <h2 class="logo_NombreApp">Teburu Portal</h2>
+            <a href="nuevaTabla.html" class="button_nuevaTabla">
+                <img class="image_nuevaTabla" src="/image/spreadsheet.png" alt="logo logOut">
+            </a>
+            <a href="explorar.html"  class="button_explorarTabla">
+                <img class="image_explorarTabla" src="/image/table-grid.png" alt="logo logOut">
+            </a>    
+        </div>
+        <a href="index.html"  class="button_logOut">
+            <img class="image_logOut" src="/image/logout.png" alt="logo logOut">
+        </a>
+    </nav>
+    <div class="contenedor_Formulario">
+        <form action="">
+            <h2 class="titulo_formulario">CREAR NUEVA TABLA</h2>
+        <div class="linea_separadora"></div>
+            <h3 class="subtitulo_formulario">Área</h3>
+            <p class="descripcion">Seleccione el Área correspondiente, si no existe seleccione CREAR ÁREA</p>
+            <select name="areas" id="">
+                <option value="nombre_area1">nombre_Área1</option>
+                <option value="nombre_area2">nombre_Área2</option>
+                <option value="nombre_area3">nombre_Área3</option>
+                <option value="crear_area">CREAR ÁREA</option>
+            </select>
+            <input type="text" name="nueva_area" id="" placeholder="Insertar nombre de nueva área">
+        <div class="linea_separadora"></div>
+            <h3 class="subtitulo_formulario">Proyecto</h3>
+            <p class="descripcion">Seleccione el Proyecto correspondiente, si no existe seleccione CREAR PROYECTO</p>
+            <select name="areas" id="">
+                <option value="nombre_area1">nombre_Proyecto1</option>
+                <option value="nombre_area2">nombre_Proyecto2</option>
+                <option value="nombre_area3">nombre_Proyecto3</option>
+                <option value="crear_area">CREAR PROYECTO</option>
+            </select>
+            <input type="text" name="nuevo_proyecto" id="" placeholder="Insertar nombre de nuevo proyecto">
+        <div class="linea_separadora"></div>
+            <h3 class="subtitulo_formulario">Tabla</h3>
+            <label>Nombre
+                <input id="input_nombreTabla" type="text" placeholder="Inserte nombre de tabla">
+            </label>
+            <label for="input_schema" id="label_Schema">Schema</label>
+            <p class="descripcion">Inserte los nombres de las columnas y los tipos de datos deseados. <i>Por ejemplo: producto varchar(30) NOT NULL, precio int NOT NULL</i></p>
+            <input type="text" name="input_schema" id="input_schema" placeholder="Inserte schema de la tabla">
+            <p class="descripcion">A continuación inserte los carácteres que no estarán permitidos en los nombres de las columnas, sin separarlos por espacios. <i>NOTA: el espacio es considerado un caracter más</i></p>
+            <input type="text" id="input_caracteres"placeholder="Inserte carácteres">
+        <div class="linea_separadora"></div>
+            <h3 class="subtitulo_formulario">Usuarios</h3>
+            <div class="contenedor_usuarios">
+                <div class="contenedor_inputUsuarios">
+                    <p class="descripcion">Ingrese los mails de los usuarios que podrán modificar las tablas</p>
+                    <input type="email" placeholder="Ejemplo: empleado@ejemplo.com">
+                    <button class="button_agregarUsuario">Agregar a lista</button>
+                </div>
+                <div>
+                    <p class="descripcion">Usuarios ingresados:</p>                    
+                    <div id="lista_Usuarios"></div>
+                </div>
+    
+            </div>
+        <div class="linea_separadora"></div>
+            <button class="button_crearTabla">Confirmar creación tabla</button>
+            <button class="button_cancelar">Cancelar</button>
+        </form>
+    </div>
+
+</body>
+</html>
