@@ -28,66 +28,11 @@
     </nav>
     <div class="contenedor_Areas">
         <h2 class="subtitulos_explorar">ÁREAS</h2>
-        <div class="contenedor_Total">
-            <div class="contenedor_Area">
-                <p>nombre_Area1</p>
-            </div>
-            <div class="contenedor_Area">
-                <p>nombre_Area2</p>
-            </div>
-            <div class="contenedor_Area">
-                <p>nombre_Area3</p>
-            </div>
-        </div>
+        <div id="contenedor_TotalAreas" class="contenedor_Total"></div>
     </div>
-    <div class="contenedor_Proyectos">
-        <img class="icon_cerrar" src="/image/cerrar.png" alt="">
-        <h2 class="subtitulos_explorar">NOMBRE_AREA1 - PROYECTOS</h2>
-        <div class="contenedor_Total">
-            <div class="contenedor_Proyecto">
-                <p>nombre_Proyecto1</p>
-            </div>
-            <div class="contenedor_Proyecto">
-                <p>nombre_Proyecto2</p>
-            </div>
-            <div class="contenedor_Proyecto">
-                <p>nombre_Proyecto3</p>
-            </div>
-        </div>
-    </div>
-    <div class="contenedor_Tablas">
-        <img class="icon_cerrar" src="/image/cerrar.png" alt="">
-        <h2 class="subtitulos_explorar">NOMBRE_AREA1 - NOMBRE_PROYECTO1 - TABLAS</h2>
-        <div class="contenedor_TotalTablas">
-            <div class="contenedor_Tabla">
-                <p class="nombre_Tabla">nombre_Proyecto1</p>
-                <div class="contenedor_botones">
-                    <button class="button_tabla">Mostrar Tabla</button>
-                    <label class="input_labelTabla">Selecionar Archivo
-                        <input class="input_fileTabla" type="file">    
-                    </label>
-                </div>
-            </div>
-            <div class="contenedor_Tabla">
-                <p class="nombre_Tabla">nombre_Proyecto2</p>
-                <div class="contenedor_botones">
-                    <button class="button_tabla">Mostrar Tabla</button>
-                    <label class="input_labelTabla">Selecionar Archivo
-                        <input class="input_fileTabla" type="file">    
-                    </label>
-                </div>
-            </div>
-            <div class="contenedor_Tabla">
-                <p class="nombre_Tabla">nombre_Proyecto3</p>
-                <div class="contenedor_botones">
-                    <button class="button_tabla">Mostrar Tabla</button>
-                    <label class="input_labelTabla">Selecionar Archivo
-                        <input class="input_fileTabla" type="file">    
-                    </label>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <div id="contenedor_ProyectosVacio" class="contenedor_Vacio"></div>
+    <div id="contenedor_TablasVacio" class="contenedor_Vacio"></div>
+    
+    <script src="/js/mainExplorar.js"></script>
 </body>
 </html>
