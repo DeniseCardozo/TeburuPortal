@@ -1,0 +1,233 @@
+{
+  "areas": [
+    {
+      "id": 1,
+      "nombre": "Direccion"
+    },
+    {
+      "id": 2,
+      "nombre": "Recursos Humanos"
+    },
+    {
+      "id": 3,
+      "nombre": "Produccion"
+    },
+    {
+      "id": 4,
+      "nombre": "Finanzas o contabilidad"
+    },
+    {
+      "id": 5,
+      "nombre": "Marketing y ventas"
+    },
+    {
+      "id": 6,
+      "nombre": "Tecnologia"
+    },
+    {
+      "id": 7,
+      "nombre": "Servicio al cliente"
+    }
+  ],
+  "proyectos": [
+    {
+      "id": 1,
+      "nombre": "Direccion",
+      "proyectos": [
+        {
+          "id": 1,
+          "nombre": "Administracion_Total"
+        },
+        {
+          "id": 2,
+          "nombre": "Resumen_Mensual"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Recursos Humanos",
+      "proyectos": [
+        {
+          "id": 3,
+          "nombre": "CV_Recibidos"
+        },
+        {
+          "id": 4,
+          "nombre": "Empleados"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Produccion",
+      "proyectos": [
+        {
+          "id": 5,
+          "nombre": "Materia_Prima"
+        },
+        {
+          "id": 6,
+          "nombre": "Productos_Terminados"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Finanzas o contabilidad",
+      "proyectos": [
+        {
+          "id": 7,
+          "nombre": "Pagos_Empleados"
+        },
+        {
+          "id": 8,
+          "nombre": "Pagos_Proveedores"
+        },
+        {
+          "id": 17,
+          "nombre": "Pagos_Impuestos"
+        },
+        {
+          "id": 18,
+          "nombre": "Inversiones"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Marketing y ventas",
+      "proyectos": [
+        {
+          "id": 9,
+          "nombre": "Nuevos_Productos"
+        },
+        {
+          "id": 10,
+          "nombre": "Clientes"
+        },
+        {
+          "id": 13,
+          "nombre": "Productos"
+        },
+        {
+          "id": 14,
+          "nombre": "Ventas"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Tecnologia",
+      "proyectos": [
+        {
+          "id": 11,
+          "nombre": "Soporte tecnico"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Servicio al cliente",
+      "proyectos": [
+        {
+          "id": 12,
+          "nombre": "Reclamos"
+        }
+      ]
+    }
+  ],
+  "tablas": [
+    {
+      "id": 1,
+      "nombre": "Administracion_Total",
+      "tablas": [
+            {
+              "id": 1,
+              "nombre": "Administración_BuenosAires_2023",
+              "esquema": "",
+              "caracteres_especiales": ""
+            },
+            {
+              "id": 2,
+              "nombre": "Administración_SanLuis_2023",
+              "esquema": "",
+              "caracteres_especiales": ""
+            }
+          ]
+    },
+    {
+      "id": 2,
+      "nombre": "Resumen_Mensual",
+      "tablas": [
+            {
+              "id": 3,
+              "nombre": "Firmas_BuenosAires_2023",
+              "esquema": "",
+              "caracteres_especiales": ""
+            }
+          ]
+    },
+    {
+      "id": 3,
+      "nombre": "CV_Recibidos",
+      "tablas": [
+            {
+              "id": 4,
+              "nombre": "CV_BuenosAires",
+              "esquema": "",
+              "caracteres_especiales": ""
+            }
+          ]
+    },
+    {
+      "id": 4,
+      "nombre": "Empleados",
+      "tablas": [
+            {
+              "id": 5,
+              "nombre": "Sucursal_BuenosAires",
+              "esquema": "",
+              "caracteres_especiales": ""
+            },
+            {
+              "id": 6,
+              "nombre": "Sucursal_SanLuis",
+              "esquema": "",
+              "caracteres_especiales": ""
+            }
+          ]
+    },
+    {
+      "id": 5,
+      "nombre": "Materia_Prima",
+      "tablas": [
+            {
+              "id": 7,
+              "nombre": "ControlMateriaPrima",
+              "esquema": "",
+              "caracteres_especiales": ""
+            }
+          ]
+    },
+    {
+      "id": 6,
+      "nombre": "Productos_Terminados",
+      "tablas": [
+            {
+              "id": 8,
+              "nombre": "Productos Abril-Septiembre_2022",
+              "esquema": "",
+              "caracteres_especiales": ""
+            },
+            {
+              "id": 9,
+              "nombre": "Productos Octubre-Diciembre_2022",
+              "esquema": "",
+              "caracteres_especiales": ""
+            }
+          ]
+    }
+  ]
+
+}

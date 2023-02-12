@@ -1,0 +1,19 @@
+{
+  "name": "teburoportal---integrador",
+  "version": "1.0.0",
+  "description": "servidor para pruebas",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeniseCardozo/TeburuPortal.git"
+  },
+  "author": "DeniseCardozo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeniseCardozo/TeburuPortal/issues"
+  },
+  "homepage": "https://github.com/DeniseCardozo/TeburuPortal#readme"
+}
