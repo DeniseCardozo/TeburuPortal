@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DeniseCardozo/TeburuPortal/issues"
   },
-  "homepage": "https://github.com/DeniseCardozo/TeburuPortal#readme"
+  "homepage": "https://github.com/DeniseCardozo/TeburuPortal#readme",
+  "dependencies": {
+    "sweetalert2": "^11.7.1"
+  }
 }
