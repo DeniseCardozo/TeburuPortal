@@ -1,28 +1,44 @@
 const url = "http://localhost:3000";
 
-const contenedor_TotalAreas = document.querySelector('#contenedor_TotalAreas');
+
+const contenedor_AreasVacio = document.querySelector('#contenedor_AreasVacio');
 const contenedor_ProyectosVacio = document.querySelector('#contenedor_ProyectosVacio')
 const contenedor_TablasVacio = document.querySelector('#contenedor_TablasVacio')
-
+const contenedor_Areas = document.querySelector('#contenedor_Areas');
 
 
     ///////////////GET AREAS (Solo nombres)///////////////
 
 const getAreas = async () => {
     try {
+        contenedor_AreasVacio.innerHTML = `
+        <div class="contenedor_Areas" class="contenedor_Areas">
+            <h2 class="subtitulos_explorar">ÁREAS</h2>
+            <div id="contenedor_AreaRefuerzo" class="contenedor_AreaRefuerzo">
+                <div id="contenedor_TotalAreas" class="contenedor_TotalAreas"></div>
+            </div>
+        </div>
+        `  
+        const contenedor_TotalAreas = document.querySelector('#contenedor_TotalAreas');
+
         const response = await fetch(`${url}/areas`)
         const jsonResponse = await response.json();
         jsonResponse.map(element => {
             contenedor_TotalAreas.innerHTML += `
-            <div id="contenedor_Area" class="contenedor_Area" onclick="getProyectobyIdArea(${element.id})" >
+            <div class="contenedor_Area" onclick="getProyectobyIdArea(${element.id})" >
                 <p>${element.nombre}</p>
             </div>
             `
         });
+        if (jsonResponse.length > 4) { 
+            agregarFlechas(contenedor_Areas)
+        }
     } catch (error) {
         console.log(error)
     }
 }
+
+
 
 getAreas();
 
@@ -49,24 +65,33 @@ const getProyectobyIdArea = async (id_Area) => {
                 <div id="contenedor_TotalProyectos" class="contenedor_Total"></div>
             </div>
                 `  
-
+        
         const contenedor_TotalProyectos = document.querySelector('#contenedor_TotalProyectos')
+        const contenedor_Proyectos = document.querySelector('.contenedor_Proyectos')
+
 
         jsonResponse.proyectos.map(element => { 
             contenedor_TotalProyectos.innerHTML += `
             <div id="contenedor_Proyecto" class="contenedor_Proyecto" 
             onclick="getTablasbyIdProyecto(${element.id})"
             >
-                <p>${element.nombre}</p>
+            <p>${element.nombre}</p>
             </div>
             `        
-        } ) 
+        }) 
+        
+             
+        if (jsonResponse.proyectos.length > 4) { 
+            agregarFlechas(contenedor_Proyectos)
+            console.log("supuestamenteeee andaaaaa")
+        }
+
     } catch (error) {
         console.log(error)
     }
 }
 
-
+const contenedor_Proyectos = document.querySelector
 
     ///////////////GET TABLAS BY ID PROYECTO///////////////
 
@@ -93,12 +118,6 @@ const getTablasbyIdProyecto = async (id_Proyecto) => {
                 </label>
             </div>
         </div>
-
         `        
     } )     
-        
-
-
-
-
 }
