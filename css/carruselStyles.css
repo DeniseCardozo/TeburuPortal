@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.contenedor_AreaRefuerzo {
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.contenedor_TotalAreas {
+    display: flex;
+    width: 500%;
+    height: 230px;
+    gap: 25px;
+    align-items: center;
+    margin-right: 100%;
+}
+.contenedor_botonesFlecha {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.botonFlechaIzquierda, .botonFlechaDerecha {
+    display: inline;
+    width: 35px;
+    font-family: 'Montserrat', sans-serif;
+    filter:  invert(0.8);
+}
