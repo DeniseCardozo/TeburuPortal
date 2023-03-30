@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/teburuPortalIcon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
         <div class="contenedor_botonesImportantes">
             <h2 class="logo_NombreApp">Teburu Portal</h2>
             <a href="nuevaTabla.html" class="button_nuevaTabla">
-                <img class="image_nuevaTabla" src="/image/spreadsheet.png" alt="logo logOut">
+                <img class="image_nuevaTabla" src="/image/mas.png" alt="logo logOut">
             </a>
             <a href="explorar.html"  class="button_explorarTabla">
                 <img class="image_explorarTabla" src="/image/table-grid.png" alt="logo logOut">
@@ -27,44 +28,47 @@
         </a>
     </nav>
     <div class="contenedor_Formulario">
-        <form action="">
+        <form action="" id="form">
             <h2 class="titulo_formulario">CREAR NUEVA TABLA</h2>
         <div class="linea_separadora"></div>
             <h3 class="subtitulo_formulario">Área</h3>
             <p class="descripcion">Seleccione el Área correspondiente, si no existe seleccione CREAR ÁREA</p>
-            <select name="areas" id="">
-                <option value="nombre_area1">nombre_Área1</option>
-                <option value="nombre_area2">nombre_Área2</option>
-                <option value="nombre_area3">nombre_Área3</option>
-                <option value="crear_area">CREAR ÁREA</option>
+
+            <select name="areas" id="select_Areas" onchange="valores(event)" onclick="getProyectosSelector()" >
+                <option value="">Seleccione un Área</option>
             </select>
-            <input type="text" name="nueva_area" id="" placeholder="Insertar nombre de nueva área">
+
+
+            <input class="input_nuevaArea" type="text" name="areas" id="input_nuevaArea" placeholder="Insertar nombre de nueva área" onchange="valores(event)">
+
+
         <div class="linea_separadora"></div>
             <h3 class="subtitulo_formulario">Proyecto</h3>
-            <p class="descripcion">Seleccione el Proyecto correspondiente, si no existe seleccione CREAR PROYECTO</p>
-            <select name="areas" id="">
-                <option value="nombre_area1">nombre_Proyecto1</option>
-                <option value="nombre_area2">nombre_Proyecto2</option>
-                <option value="nombre_area3">nombre_Proyecto3</option>
-                <option value="crear_area">CREAR PROYECTO</option>
+            <p id="descripcion_proyecto" class="descripcion">Seleccione el Proyecto correspondiente, si no existe seleccione CREAR PROYECTO</p>
+
+
+            <select name="proyectos" id="select_Proyectos" onchange="valores(event)" >
+                <option value="">Seleccione un Proyecto</option>
             </select>
-            <input type="text" name="nuevo_proyecto" id="" placeholder="Insertar nombre de nuevo proyecto">
+            <p id="proyecto_seleccionado"></p>
+            
+            <input class="input_nuevoProyecto" type="text" name="proyectos" id="input_nuevoProyecto" placeholder="Insertar nombre de nuevo proyecto" onchange="valores(event)">
         <div class="linea_separadora"></div>
             <h3 class="subtitulo_formulario">Tabla</h3>
             <label>Nombre
-                <input id="input_nombreTabla" type="text" placeholder="Inserte nombre de tabla">
+                <input id="input_nombreTabla" type="text" placeholder="Inserte nombre de tabla" onchange="valores(event)" name="nombre">
             </label>
             <label for="input_schema" id="label_Schema">Schema</label>
-            <p class="descripcion">Inserte los nombres de las columnas y los tipos de datos deseados. <i>Por ejemplo: producto varchar(30) NOT NULL, precio int NOT NULL</i></p>
-            <input type="text" name="input_schema" id="input_schema" placeholder="Inserte schema de la tabla">
+            <p class="descripcion">Inserte los nombres de las columnas (no deben poseer espacios), los tipos de datos deseados y si permite datos nulos o no (NULL o NOT_NULL). Separe la información entre columnas con una coma ",". <i>Por ejemplo: nombre_producto varchar(30) NOT_NULL, precio int NOT_NULL, stock int NULL</i></p>
+            <input type="text" name="esquema" id="input_schema" placeholder="Inserte schema de la tabla" onchange="valores(event)">
             <p class="descripcion">A continuación inserte los carácteres que no estarán permitidos en los nombres de las columnas, sin separarlos por espacios. <i>NOTA: el espacio es considerado un caracter más</i></p>
-            <input type="text" id="input_caracteres"placeholder="Inserte carácteres">
+            <input type="text" placeholder="Inserte carácteres" onchange="valores(event)" name="caracteres_especiales">
         <div class="linea_separadora"></div>
             <h3 class="subtitulo_formulario">Usuarios</h3>
             <div class="contenedor_usuarios">
                 <div class="contenedor_inputUsuarios">
                     <p class="descripcion">Ingrese los mails de los usuarios que podrán modificar las tablas</p>
-                    <input type="email" placeholder="Ejemplo: empleado@ejemplo.com">
+                    <input type="email" name="email" placeholder="Ejemplo: empleado@ejemplo.com" onchange="valores(event)">
                     <button class="button_agregarUsuario">Agregar a lista</button>
                 </div>
                 <div>
@@ -74,10 +78,12 @@
     
             </div>
         <div class="linea_separadora"></div>
-            <button class="button_crearTabla">Confirmar creación tabla</button>
+        <a id="emailA"></a>
+            <button type="submit" onclick="crear(event)" class="button_crearTabla">Confirmar creación tabla</button>
             <button class="button_cancelar">Cancelar</button>
         </form>
     </div>
 
+    <script src="/js/mainNuevaTabla.js"></script>
 </body>
 </html>

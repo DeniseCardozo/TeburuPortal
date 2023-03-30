@@ -1,6 +1,8 @@
 let contenedor_Area = document.querySelectorAll('.contenedor_Area');
 console.log(contenedor_Area)
-let contenedor_AreaUltimo = contenedor_Area[contenedor_Area.length-1]
+let contenedor_AreaUltimo = contenedor_Area[contenedor_Area.length - 1]
+const contenedor_TotalAreas = document.querySelector('#contenedor_TotalAreas');
+
 
 const agregarFlechas = (contenedor) => { 
     contenedor.innerHTML += `
@@ -14,4 +16,4 @@ const agregarFlechas = (contenedor) => {
 const botonFlechaIzquierda = document.querySelector('#botonFlechaIzquierda');
 const botonFlechaDerecha = document.querySelector('#botonFlechaDerecha');
 
-contenedor_TotalAreas.insertAdjacentHTML('afterbegin', contenedor_AreaUltimo)
+// contenedor_TotalAreas.insertAdjacentHTML('afterbegin', contenedor_AreaUltimo)

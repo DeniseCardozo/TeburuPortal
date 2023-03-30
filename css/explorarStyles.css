@@ -6,19 +6,23 @@ body {
     padding: 30px 30px 30px 120px;
 }
 
-.contenedor_Total, .contenedor_Area, .contenedor_Proyecto, .contenedor_TotalTablas, .contenedor_Tabla, .contenedor_botones, .input_labelTabla {
+.contenedor_Total, .contenedor_Area, .contenedor_Proyecto, .contenedor_TotalTablas, .contenedor_Tabla, .contenedor_botones, .input_labelTabla, .contenedor_AreaRefuerzo, .contenedor_TotalAreas, .contenedor_TotalProyectos, .button_previewtabla, .button_editartabla, .button_eliminartabla  {
     display: flex;
 }
 
-.icon_cerrar {
-    height: 30px;
-    width: 30px;
+.icon_cerrar, .icon_cerrarModal {
+    height: 20px;
+    width: 20px;
     filter:  invert(0.8);
     display: block;
     margin: 0 0 0 auto;
 }
 
-.icon_cerrar:hover {
+.icon_cerrarModal {
+    margin: 30px 30px 0 auto;
+}
+
+.icon_cerrar:hover, .icon_cerrarModal:hover {
     transform: scale(1.3);
 }
 
@@ -28,6 +32,17 @@ body {
     border-radius: 8px;
     margin-bottom: 20px;
     padding: 40px;
+}
+
+.contenedor_AreaRefuerzo {
+    width: 100%;
+
+}
+.contenedor_TotalAreas, .contenedor_Total {
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .contenedor_Vacio {
@@ -43,7 +58,7 @@ body {
 }
 
 .contenedor_Total, .contenedor_TotalTablas, .contenedor_botones {
-    gap: 30px;
+    gap: 10px;
 }
 
 .contenedor_Total {
@@ -64,7 +79,7 @@ body {
 
 .contenedor_Area, .contenedor_Proyecto {
     width: 350px;
-    height: 200px;
+    height: 100px;
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
@@ -85,20 +100,19 @@ body {
     cursor: pointer;
 }
 
-.nombre_Tabla, .input_labelTabla, .button_tabla {
+.nombre_Tabla {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    color: rgb(225, 216, 216);
-    border-radius: 8px;
-
 }
 
-.button_tabla, .input_labelTabla  {
+.button_previewtabla, .input_labelTabla, .button_editartabla, .button_eliminartabla  {
     background-color:  rgba(0, 0, 0, 0.29);
-    font-weight: bolder;
-    height: 40px;
+    height: 60px;
+    width: 60px;
+    align-items:center;
     border: none;
-    width: 200px;
+    border-radius: 8px;
+    justify-content: center;
 }
 
 .input_labelTabla {
@@ -112,13 +126,168 @@ body {
     opacity: 0;
     overflow: hidden;
     position: absolute;
+    height: 60px;
+    width: 60px;
     /* z-index: -1; */
 }
 
-.button_tabla:hover, .input_labelTabla:hover {
+.button_previewtabla:hover, .input_labelTabla:hover, .button_editartabla:hover, .button_eliminartabla:hover  {
     background-color:  rgba(255, 255, 255, 0.29);
     color: rgb(40, 39, 39);
     transform:rotate(5deg);
     cursor: pointer;
 }
 
+.image_preview, .image_subirArchivo, .image_modificarTabla, .image_eliminar {
+    height: 30px;
+    width: 30px;
+    filter:  invert(0.8);
+}
+
+
+/* ///////////////////swal2////////////////////////// */
+
+
+
+.swal2-title {
+    font-family: 'Montserrat', sans-serif !important;
+
+  }
+  
+  /* .swal2-html-container{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px !important;
+    background-color: blue !important;
+
+  } */
+
+.swal2-modal {
+    background-color:  rgba(0, 0, 0, 0.29) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 8px !important;
+    color: aliceblue !important;
+    font-family: 'Roboto', sans-serif !important;
+    border: solid 0.5px rgba(255, 255, 255, 0.153) !important; 
+
+}
+
+.swal2-deny, .swal2-cancel .swal2-styled{
+    font-family: 'Roboto', sans-serif !important;
+    background-color:  rgba(0, 0, 0, 0.29) !important;
+}
+
+/*   
+  .swal2-confirm {
+    background-color: orange !important;
+  } */
+
+
+
+
+
+
+  
+/* ///////////////////MODAL EDITAR////////////////////////// */
+
+  
+.container {
+    padding: 20px 60px 60px 60px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    /* overflow: auto;  */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+
+.form {
+    background-color:  rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(10px);
+    margin: 2% auto 15% auto; 
+    border: solid 0.5px rgba(255, 255, 255, 0.153); 
+    width: 50%; 
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+    border-radius: 8px;
+
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.valor_Anterior {
+    margin: 0;
+    color: rgb(144, 141, 137);
+    font-size: 15px;
+}
+
+input{
+    height: 40px;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    background-color:  rgba(0, 0, 0, 0.327);
+    padding-left: 20px;
+    color: rgb(208, 196, 181);
+    border-radius: 8px;
+    margin: 10px 0 20px 0;
+}
+
+label {
+    display: block;
+}
+
+input, label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+
+}
+
+input, .button_cancelar, .button_EditarTabla {
+    border: solid 0.5px rgba(255, 255, 255, 0.123); 
+
+}
+
+.button_cancelar, .button_EditarTabla {
+    height: 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color:  rgba(0, 0, 0, 0.29);
+    font-weight: bolder;
+}
+
+.button_EditarTabla {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.button_cancelar {
+    width: 200px;
+}
+
+.button_EditarTabla:hover {
+    background-color:  rgba(95, 198, 97, 0.472);
+    transform:rotate(5deg);
+    cursor: pointer;
+}
+
+.button_cancelar:hover {
+    background-color:  rgba(193, 76, 76, 0.472);
+    transform:rotate(5deg);
+    cursor: pointer;
+}

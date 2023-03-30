@@ -69,6 +69,10 @@ input {
     width: 400px;
 }
 
+.input_nuevaArea, .input_nuevoProyecto {
+     display: none; 
+}
+
 #input_nombreTabla {
     margin-left: 10px;
 }

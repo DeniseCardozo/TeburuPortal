@@ -13,8 +13,7 @@ window.onclick = function(event) {
     }
 }
 
-    ///////////////GET AREAS (Solo nombres)///////////////
-    ///////////////GET AREAS (Solo nombres)///////////////
+
     ///////////////GET AREAS (Solo nombres)///////////////
 
 const getAreas = async () => {
@@ -51,8 +50,7 @@ getAreas();
 
 
 
-    ///////////////GET PROYECTOS BY ID AREAS///////////////
-    ///////////////GET PROYECTOS BY ID AREAS///////////////
+
     ///////////////GET PROYECTOS BY ID AREAS///////////////
                 ////(Me trae Id_Area, nombre_Area y array con proyectos)
 
@@ -102,11 +100,8 @@ const contenedor_Proyectos = document.querySelector
 
 
 
-    ///////////////GET TABLAS BY ID PROYECTO///////////////
-    ///////////////GET TABLAS BY ID PROYECTO///////////////
-    ///////////////GET TABLAS BY ID PROYECTO///////////////
 
-
+    ///////////////GET TABLAS BY ID PROYECTO///////////////
 
 const getTablasbyIdProyecto = async (id_Proyecto) => { 
     const response1 = await fetch(`${url}/proyectos/${id_Proyecto}`)
@@ -132,110 +127,18 @@ const getTablasbyIdProyecto = async (id_Proyecto) => {
                 </div>
                 <label class="input_labelTabla">
                     <img class="image_subirArchivo" src="/image/subir-archivo.png" alt="logo subirArchivo">
-                    <input class="input_fileTabla" type="file" onchange="valorInputFile(event)" >    
+                    <input class="input_fileTabla" type="file">    
                 </label>
-                <div id="button_editartabla" class="button_editartabla" onclick="abrirModal(${element.id_tabla})" >
-                    <img class="image_modificarTabla" src="/image/editar.png" alt="logo modificar">
-                </div>
-                <div id="button_eliminartabla" class="button_eliminartabla" onclick="deleteTabla(${element.id_tabla})">
-                    <img class="image_eliminar" src="/image/eliminar.png" alt="logo eliminar">
-                </div>
             </div>
         </div>
-        
         ` 
         console.log(element)
     } )     
 }
 
 
-    ///////////////SUBIR ARCHIVO EXCEL///////////////
-    ///////////////SUBIR ARCHIVO EXCEL///////////////
-    ///////////////SUBIR ARCHIVO EXCEL///////////////
-
-let inputFile = null;
-
-const valorInputFile = (event) => {
-    event.preventDefault();
-    inputFile = event.target.files[0];
-
-    console.log(inputFile)
-    Swal.fire({
-        title: 'Revisión de archivo',
-        text: "Quiere continuar con el proceso?",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, revisar archivo!',
-        cancelButtonText: 'Cancelar'
-      }).then( async (result) => {
-          if (result.isConfirmed) {
-
-          Swal.fire(
-            'Revisión terminada!',
-            'Su archivo .....',
-            'success'
-          )
-        }
-      })
-}
 
 
-
-    ///////////////POST ARCHIVO EXCEL///////////////
-    ///////////////POST ARCHIVO EXCEL///////////////
-    ///////////////POST ARCHIVO EXCEL///////////////
-
-
-
-const postEnviarArchivo = async () => { 
-    let formData = new FormData(); 
-    formData.append('archivoExcel', inputFile)
-    
-    try {
-        const response = await fetch(`${url}/tabla`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: formData
-        })
-        if (response.ok) { 
-            const jsonResponse = await response.json();
-            console.log(jsonResponse)
-        }
-    } catch  (error) {
-        console.log(error)
-    }
-}
-
-
-
-    ///////////////ABRIR MODAL RevisarArchivo///////////////
-    ///////////////ABRIR MODAL RevisarArchivo///////////////
-    ///////////////ABRIR MODAL RevisarArchivo///////////////
-
-if (inputFile != null) { 
-}
-
-
-const abrirModalRevisarArchivo = () => {
-    document.body.innerHTML += `
-    <div id="id01" class="modal">
-            <img class="icon_cerrarModal" src="/image/cerrar.png" alt="" onclick="document.getElementById('id01').style.display='none'">          
-            <div>
-                <button class="button_EditarTabla" type="submit">Editar tabla</button>
-                <button class="button_cancelar" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-            </div>
-
-        </div>
-    `        
-}
-
-
-
-
-    ///////////////ABRIR MODAL Editar///////////////
-    ///////////////ABRIR MODAL Editar///////////////
     ///////////////ABRIR MODAL Editar///////////////
 
 let inputsEditar = {}
@@ -291,8 +194,7 @@ const valoresEditar = (event) => {
 }
 
 
-    ///////////////PUT EDITAR TABLA //////////////
-    ///////////////PUT EDITAR TABLA //////////////
+
     ///////////////PUT EDITAR TABLA //////////////
 
 
@@ -323,13 +225,7 @@ const editar = (event) => {
     editTabla();
 }
 
-
-
     ///////////////DELETE TABLA por Id///////////////
-    ///////////////DELETE TABLA por Id///////////////
-    ///////////////DELETE TABLA por Id///////////////
-
-
     const deleteTabla = (id_tabla) => { 
         try {
             Swal.fire({
